@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn.jim-nielsen.com/ios/512/weather-2019-02-07.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Weather app</title>
 </head>
+
 <body>
+    <div id="navbar">
+        <div class="logo">Weather App</div>
+    </div>
+
+
     <div id="container">
         <div id="search">
             <input type="text" placeholder="Enter city name" spellcheck="false">
-            <button><img src="images/search.png" ></button>
+            <button> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg></button>
         </div>
         <div id="weather">
-            <img src="images/rain.png" id="weather-icon">
-            <h1 id="temp">22°c</h1>
-            <h2 id="city">New York</h2>
+            <img src="images/clear.png" id="weather-icon">
+            <h1 id="temp"></h1>
+            <h2 id="city">Delhi</h2>
             <div id="details">
                 <div id="col">
                     <img src="images/humidity.png">
                     <div>
-                        <p id="humidity">50%</p>
+                        <p id="humidity"></p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div id="col">
                     <img src="images/wind.png">
                     <div>
-                        <p id="wind">15 km/hr</p>
+                        <p id="wind"></p>
                         <p>Wind Speed</p>
                     </div>
                 </div>
-                
+
             </div>
         </div>
+
+        <div id="popup" class="popup">
+            <img src="images/alert.png">
+            <h2>Alert!</h2>
+            <p>Invalid city name<br>Please enter a valid city name</p>
+            <button type="button" id="btn2" onclick="closePopup()">OK</button>
+        </div>
+
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
